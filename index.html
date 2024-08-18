@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line Encoding Assignment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin: 20px;
+            text-align: center;
+        }
+        .encoding {
+            margin-top: 20px;
+        }
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Line Encoding</h1>
+        <label for="dataInput">Enter Binary Data Sequence: </label>
+        <input type="text" id="dataInput" value="01001110">
+        <button onclick="encodeData()">Encode Data</button>
+
+        <div id="unipolar" class="encoding">
+            <h2>Unipolar Encoding</h2>
+            <canvas id="unipolarCanvas" width="500" height="150"></canvas>
+        </div>
+        <div id="nrzi" class="encoding">
+            <h2>Polar NRZ-I Encoding</h2>
+            <canvas id="nrziCanvas" width="500" height="150"></canvas>
+        </div>
+        <div id="nrzl" class="encoding">
+            <h2>Polar NRZ-L Encoding</h2>
+            <canvas id="nrzlCanvas" width="500" height="150"></canvas>
+        </div>
+        <div id="manchester" class="encoding">
+            <h2>Manchester Encoding</h2>
+            <canvas id="manchesterCanvas" width="500" height="150"></canvas>
+        </div>
+        <div id="differentialManchester" class="encoding">
+            <h2>Differential Manchester Encoding</h2>
+            <canvas id="differentialManchesterCanvas" width="500" height="150"></canvas>
+        </div>
+    </div>
+    <script src="Encode.js"></script>
+</body>
+</html>
